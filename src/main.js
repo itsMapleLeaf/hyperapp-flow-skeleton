@@ -1,5 +1,15 @@
 // @flow
 import {app} from 'hyperapp'
-import {model, actions, view} from './app'
 
-app({ model, actions, view })
+function render () {
+  const root = document.getElementById('app')
+  if (root) {
+    root.innerHTML = ''
+    app({ ...require('./app'), root })
+  }
+}
+
+if (module.hot) {
+  module.hot.accept('./app', render)
+}
+render()

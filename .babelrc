@@ -1,7 +1,8 @@
 {
   "presets": [
     ["env", { "modules": false }],
-    "flow"
+    "flow",
+    "stage-3"
   ],
   "plugins": [
     ["transform-react-jsx", { "pragma": "h" }]
