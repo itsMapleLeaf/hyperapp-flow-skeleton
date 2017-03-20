@@ -1,12 +1,14 @@
-const {resolve} = require('path')
+const path = require('path')
+
+const sourcePath = 'src'
+const outPath = 'out'
 
 module.exports = function (env = {}) {
   return {
-    entry: './src/main.js',
+    entry: `./${sourcePath}/main.js`,
     output: {
       filename: 'bundle.js',
-      path: resolve(__dirname, 'out'),
-      publicPath: '/out/',
+      path: path.resolve(__dirname, outPath),
     },
     module: {
       rules: [
