@@ -17,6 +17,9 @@ module.exports = function (env = {}) {
         { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
       ]
     },
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
     plugins: [
       new HtmlPlugin({ template: `./${sourcePath}/index.html` })
     ],
