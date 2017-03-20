@@ -1,4 +1,5 @@
 const path = require('path')
+const HtmlPlugin = require('html-webpack-plugin')
 
 const sourcePath = 'src'
 const outPath = 'out'
@@ -14,6 +15,9 @@ module.exports = function (env = {}) {
       rules: [
         { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
       ]
-    }
+    },
+    plugins: [
+      new HtmlPlugin({ template: './src/index.html' })
+    ]
   }
 }
