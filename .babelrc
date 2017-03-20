@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "env",
+    "flow"
+  ],
+  "plugins": [
+    ["transform-react-jsx", { "pragma": "h" }]
+  ]
+}
