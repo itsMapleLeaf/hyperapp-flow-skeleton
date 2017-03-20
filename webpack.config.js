@@ -19,5 +19,6 @@ module.exports = function (env = {}) {
     plugins: [
       new HtmlPlugin({ template: './src/index.html' })
     ]
+    devtool: 'source-map'
   }
 }
