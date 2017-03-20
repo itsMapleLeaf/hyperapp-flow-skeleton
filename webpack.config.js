@@ -10,6 +10,7 @@ module.exports = function (env = {}) {
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, outPath),
+      publicPath: '/',
     },
     module: {
       rules: [
